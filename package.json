@@ -1,0 +1,19 @@
+{
+  "name": "deno-play",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate": "(cd src/my_grammar/ && antlr4ts -visitor -listener -Dlanguage=TypeScript -o generated MyGrammar.g4)",
+    "start-deno": "(cd src && deno run --allow-read --allow-write --allow-net --allow-env --unstable-sloppy-imports server.ts)",
+    "start": "(cd src && ts-node server.ts)"
+  },
+  "devDependencies": {
+    "antlr4ts-cli": "^0.5.0-alpha.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "antlr4ts": "^0.5.0-alpha.4"
+  }
+}
